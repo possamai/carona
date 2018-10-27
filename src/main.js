@@ -12,12 +12,21 @@ import App from './App'
 import router from './router'
 import store from './store/index'
 
+import * as VueGoogleMaps from "vue2-google-maps";
+
 Vue.use(Vuetify)
 Vue.use(VeeValidate)
 Vue.use(VueFire)
 Vue.use(VueMoment)
 
 Vue.config.productionTip = false
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: "AIzaSyBIwB6G5qHZKslOEwIWJqRZHffKK6xOvWY",
+    libraries: "places"
+  }
+});
 
 /* eslint-disable no-new */
 new Vue({

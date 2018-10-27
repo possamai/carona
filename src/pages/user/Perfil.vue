@@ -13,8 +13,8 @@
               <v-menu ref="menu" :close-on-content-click="false" v-model="menu"
                 :nudge-right="40" :return-value.sync="date" lazy transition="scale-transition"
                 offset-y full-width min-width="290px">
-                <v-text-field slot="activator" v-model="nascimento" label="Data do Nascimento" prepend-icon="event" readonly ></v-text-field>
-                <v-date-picker v-model="nascimento" locale="pt-br" no-title scrollable>
+                <v-text-field slot="activator" v-model="model.nascimento" label="Data do Nascimento" prepend-icon="event" readonly ></v-text-field>
+                <v-date-picker v-model="model.nascimento" locale="pt-br" no-title scrollable>
                   <v-spacer></v-spacer>
                   <v-btn flat color="primary" @click="menu = false">Cancel</v-btn>
                   <v-btn flat color="primary" @click="$refs.menu.save(date)">OK</v-btn>
@@ -27,7 +27,7 @@
               <img :src="imageUrl" height="150" v-if="imageUrl"/>
               <v-text-field label="Selecione uma foto" v-model="imageName" prepend-icon="attach_file"></v-text-field>
 
-              <v-checkbox label="Necessita acessibilidade" v-model="checkbox"></v-checkbox>
+              <v-checkbox label="Necessita acessibilidade" v-model="model.acessibilidade"></v-checkbox>
             </v-form>
           </v-card-text>
 
@@ -54,7 +54,12 @@ export default {
     return {
       model: {
         nome : '',
-        genero : ''
+        cpf: '',
+        genero : '',
+        nascimento: '',
+        telefone: '',
+        telemergencia : '',
+        acessibilidade: false,
       },
       generos: [
         {
