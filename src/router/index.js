@@ -8,6 +8,8 @@ import Signin from '@/pages/User/Signin'
 import Signup from '@/pages/User/Signup'
 import Perfil from '@/pages/User/Perfil'
 import Veiculo from '@/pages/Veiculo'
+import Pesquisar from '@/pages/Pesquisar'
+import Cadastrar from '@/pages/Cadastrar'
 
 Vue.use(Router)
 
@@ -52,6 +54,18 @@ export default new Router({
       path: '/veiculo',
       name: 'Veiculo',
       component: Veiculo,
+      beforeEnter: AuthGuard
+    },
+    {
+      path: '/pesquisar_viagem',
+      name: 'Pesquisar',
+      component: Pesquisar,
+      beforeEnter: AuthGuard
+    },
+    {
+      path: '/cadastrar_viagem',
+      name: 'Cadastrar',
+      component: Cadastrar,
       beforeEnter: AuthGuard
     },
   ]

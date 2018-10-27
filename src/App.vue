@@ -174,6 +174,8 @@ export default {
         // },
         { icon: 'contacts', text: 'Perfil', link: 'Perfil' },
         { icon: 'drive_eta', text: 'Veículo', link: 'Veiculo' },
+        { icon: 'my_location', text: 'Pesquisar', link: 'Pesquisar' },
+        { icon: 'transfer_within_a_station', text: 'Cadastrar Viagem', link: 'Cadastrar' },
       ]
       return items;
     },
