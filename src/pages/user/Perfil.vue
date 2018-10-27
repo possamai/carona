@@ -1,7 +1,7 @@
 <template>
   <v-layout>
-    <v-flex xs8 offset-xs2>     
-      
+    <v-flex xs8 offset-xs2>
+
         <v-card class="elevation-12">
           <v-card-text>
             <v-form @submit.prevent="submit">
@@ -20,7 +20,8 @@
                   <v-btn flat color="primary" @click="$refs.menu.save(date)">OK</v-btn>
                 </v-date-picker>
               </v-menu>
-
+              <v-text-field label="Telefone" v-model="model.telefone" required ></v-text-field>
+              <v-text-field label="Telefone Emergência" v-model="model.telemergencia" required ></v-text-field>
               <v-select :items="generos" v-model="model.genero" label="Gênero" item-text="desc" item-value="cod"></v-select>
 
               <img :src="imageUrl" height="150" v-if="imageUrl"/>
@@ -29,13 +30,13 @@
               <v-checkbox label="Necessita acessibilidade" v-model="checkbox"></v-checkbox>
             </v-form>
           </v-card-text>
-          
+
           <v-card-actions></v-card-actions>
             <v-spacer></v-spacer>
             <v-btn color="primary" class="text-transform-none" @click="submit">Salvar</v-btn>
           </v-card-actions>
         </v-card>
-      
+
     </v-flex>
   </v-layout>
 </template>
@@ -70,6 +71,8 @@ export default {
         },
       ],
       date: new Date().toISOString().substr(0, 10),
+      telemergencia : '',
+      telefone : ''
     }
   },
   methods: {
@@ -79,7 +82,7 @@ export default {
     },
     clear () {
       // this.password = ''
-      // this.$router.push('/signup')  
+      // this.$router.push('/signup')
     },
   },
 }
