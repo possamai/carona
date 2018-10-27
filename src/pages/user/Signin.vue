@@ -6,8 +6,7 @@
         <v-card class="elevation-12">
           <v-card-text>
             <v-form @submit.prevent="submit">
-              <h2 class="headline mb-0 text-md-center">Carona</h2>
-              <h3 class="headline mb-0 text-md-center">Entrar</h3>
+              <h2 class="headline mb-0 text-md-center">Caronas Já</h2>
               <v-text-field
                 label="E-mail"
                 v-model="email"

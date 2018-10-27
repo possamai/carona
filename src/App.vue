@@ -76,27 +76,19 @@
     >
       <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
         <v-toolbar-side-icon @click.stop="drawer = !drawer" v-if="isLoggin"></v-toolbar-side-icon>
-        <span class="hidden-sm-and-down" @click.stop="home()" style="cursor: pointer;">Carona</span>
+        <span class="hidden-sm-and-down" @click.stop="home()" style="cursor: pointer;">Caronas Já</span>
       </v-toolbar-title>
-      <v-text-field
-        flat
-        solo-inverted
-        prepend-icon="search"
-        label="Search"
-        class="hidden-sm-and-down"
-        v-if="isLoggin"
-      ></v-text-field>
       <v-spacer></v-spacer>
-      <v-btn icon>
+      <!-- <v-btn icon>
         <v-icon>apps</v-icon>
       </v-btn>
       <v-btn icon>
         <v-icon>notifications</v-icon>
-      </v-btn>
+      </v-btn> -->
       <v-menu offset-y>
         <v-btn slot="activator" icon dark>
           <img
-            src="https://vuetifyjs.com/static/doc-images/logo.svg"
+            src="./assets/logo.png"
             alt="Vuetify"
             height="20px"
             width="20px">
