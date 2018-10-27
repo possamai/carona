@@ -6,6 +6,8 @@ import HelloWorld from '@/components/HelloWorld'
 import Home from '@/pages/Home'
 import Signin from '@/pages/User/Signin'
 import Signup from '@/pages/User/Signup'
+import Perfil from '@/pages/User/Perfil'
+import Veiculo from '@/pages/Veiculo'
 
 Vue.use(Router)
 
@@ -38,6 +40,18 @@ export default new Router({
     {
       path: '/logout',
       name: 'Logout',
+      beforeEnter: AuthGuard
+    },
+    {
+      path: '/perfil',
+      name: 'Perfil',
+      component: Perfil,
+      beforeEnter: AuthGuard
+    },
+    {
+      path: '/veiculo',
+      name: 'Veiculo',
+      component: Veiculo,
       beforeEnter: AuthGuard
     },
   ]
