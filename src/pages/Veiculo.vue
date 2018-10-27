@@ -46,7 +46,7 @@ export default {
         ano : '',
         cnh : '',
         acessibilidade : ''
-      }      ,
+      },
       date: new Date().toISOString().substr(0, 10),
     }
   },
